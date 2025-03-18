@@ -35,6 +35,7 @@ function agregarAmigo() {
     inputAmigo.value = "";
     actualizarLista();
 }
+
 Esta función permite agregar un amigo a la lista. Primero verifica que el campo de entrada no esté vacío y que el nombre no esté duplicado antes de añadirlo al array.
 ---------------------------------------------------------
 Función para actualizar la lista de amigos en la interfaz:
@@ -42,6 +43,7 @@ Función para actualizar la lista de amigos en la interfaz:
 function actualizarLista() {
     const listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = "";
+    
     for (let i = 0; i < amigos.length; i++) {
         const li = document.createElement('li');
         li.textContent = amigos[i];
@@ -51,16 +53,20 @@ function actualizarLista() {
 Esta función limpia la lista en la interfaz y la vuelve a generar con los nombres almacenados en el array amigos.
 --------------------------------------------------------
 Función para sortear un amigo aleatoriamente
+
 function sortearAmigo() {
     if (amigos.length === 0) {
         alert('No hay amigos disponibles para sortear. Agrega al menos uno.');
         return;
     }
+    
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    
     const amigoSorteado = amigos[indiceAleatorio];
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = ` El Amigo secreto sorteado es: <strong>${amigoSorteado}</strong> `;
 }
+
 Esta función selecciona un nombre aleatorio de la lista de amigos y lo muestra en la interfaz. Si la lista está vacía, muestra una alerta.
 ------------------------------------------------------------------
 *Estos fueron los pasos que yo seguí, estructurandolo de  esta forma no me indico ningún error en el código
