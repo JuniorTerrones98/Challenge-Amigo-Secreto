@@ -18,6 +18,7 @@ let amigos = [];
 Este array almacena los nombres de los amigos ingresados por el usuario.
 ------------------------------------------------------
 Función para agregar un amigo:
+
 function agregarAmigo() {
     const inputAmigo = document.getElementById('amigo');
     const nombreAmigo = inputAmigo.value.trim();
@@ -37,6 +38,7 @@ function agregarAmigo() {
 Esta función permite agregar un amigo a la lista. Primero verifica que el campo de entrada no esté vacío y que el nombre no esté duplicado antes de añadirlo al array.
 ---------------------------------------------------------
 Función para actualizar la lista de amigos en la interfaz:
+
 function actualizarLista() {
     const listaAmigos = document.getElementById('listaAmigos');
     listaAmigos.innerHTML = "";
